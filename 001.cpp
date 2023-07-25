@@ -9,18 +9,19 @@ int main(void)
 	cin.tie(nullptr);
 	cout.tie(nullptr);
 
-	int length = 0;
-	string numString;
-	int result = 0;
-	cin >> length >> numString;
-	for (int i = 0; i < length; i++)
+	
+	int numLength = 0;
+	string str;
+	long long sum = 0;
+	cin >> numLength; //숫자의 길이
+	cin >> str; //숫자로 된 문자열
+
+	for (int i = 0; i < numLength; i++) //문자열 길이만큼 반복하며 각 자리의 숫자값을 알아와 계산
 	{
-		int temp = 0;
-		temp = numString[i] - '0';
-		result += temp;
+		sum += str[i] - '0';
 	}
 
-	cout << result;
+	cout << sum;
 	return 0;
 
 
